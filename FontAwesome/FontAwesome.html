@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Font Awesome Icon Example</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css" />
+    <style>
+        .fa-solid {
+            font-size: 100px;
+        }
+
+        .red {
+            color: red;
+        }
+
+        .green {
+            color: green;
+        }
+
+        .blue {
+            color: blue;
+        }
+
+        .yellow {
+            color: yellow;
+        }
+
+        .purple {
+            color: purple;
+        }
+
+        .orange {
+            color: orange;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Font Awesome</h1>
+    <p>house
+
+        <i onclick="skriftfarge(this)" class="fa-solid fa-heart red" aria-label="red heart"></i>
+        <i onclick="skriftfarge(this)" class="fa-solid fa-star green" aria-label="green star"></i>
+        <i onclick="skriftfarge(this)" class="fa-solid fa-bell blue" aria-label="blue bell"></i>
+        <i onclick="skriftfarge(this)" class="fa-solid fa-moon yellow" aria-label="yellow moon"></i>
+        <i onclick="skriftfarge(this)" class="fa-solid fa-sun purple" aria-label="purple sun"></i>
+        <i onclick="skriftfarge(this)" class="fa-solid fa-leaf orange" aria-label="orange leaf"></i>
+    </p>
+
+    <script>
+        function skriftfarge(icon) {
+            const currentColor = getComputedStyle(icon).color;
+            const colorNames = {
+                "rgb(255, 0, 0)": "red",
+                "rgb(0, 128, 0)": "green",
+                "rgb(0, 0, 255)": "blue",
+                "rgb(255, 255, 0)": "yellow",
+                "rgb(128, 0, 128)": "purple",
+                "rgb(255, 165, 0)": "orange"
+            };
+
+            console.log(colorNames[currentColor] || `Unknown color (${currentColor})`);
+        }
+    </script>
+
+</body>
+
+</html>
